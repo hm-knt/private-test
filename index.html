@@ -1,0 +1,82 @@
+<!doctype html>
+<!--
+  Standalone card-autofill test page.
+
+  Purpose: check whether a browser / in-app browser offers credit-card autofill
+  (saved cards / password manager) on a simple card form, and that submitting it
+  redirects back to a configured callback URL with a one-time code.
+
+  No real data is collected or sent. The "card number" never leaves the page;
+  on submit the page only redirects to the callback with a fake code. Host this
+  at any https URL and open it in the browser/container you want to test.
+
+  Configure the return target with ?redirect=<url-encoded-callback>.
+  Example: ?redirect=myapp%3A%2F%2Fcallback
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Card autofill test</title>
+    <style>
+      body { font: -apple-system-body, system-ui, sans-serif; margin: 24px; color: #111; background: #fff; }
+      h1 { font-size: 17px; }
+      p { color: #555; font-size: 13px; }
+      label { display: block; margin: 16px 0 4px; font-size: 13px; font-weight: 600; }
+      input { width: 100%; box-sizing: border-box; padding: 12px; font-size: 16px;
+        border: 1px solid #ccc; border-radius: 8px; }
+      button { margin-top: 24px; width: 100%; padding: 14px; font-size: 16px;
+        border: 0; border-radius: 8px; background: #444; color: #fff; }
+      .row { display: flex; gap: 12px; }
+      .row > div { flex: 1; }
+      .note { margin-top: 20px; font-size: 12px; color: #888; }
+    </style>
+  </head>
+  <body>
+    <h1>Add card</h1>
+    <p>Tap a field. If a saved-card / password-manager autofill prompt appears, autofill
+      is supported in this container. Submit returns a one-time code to the app.</p>
+
+    <form id="form" novalidate>
+      <label for="cc-name">Name on card</label>
+      <input id="cc-name" name="cc-name" type="text" autocomplete="cc-name" />
+
+      <label for="cc-number">Card number</label>
+      <input id="cc-number" name="cc-number" type="text" inputmode="numeric"
+        autocomplete="cc-number" maxlength="19" placeholder="1234 1234 1234 1234" />
+
+      <div class="row">
+        <div>
+          <label for="cc-exp">Expiry</label>
+          <input id="cc-exp" name="cc-exp" type="text" inputmode="numeric"
+            autocomplete="cc-exp" maxlength="7" placeholder="MM/YY" />
+        </div>
+        <div>
+          <label for="cc-csc">CVC</label>
+          <input id="cc-csc" name="cc-csc" type="text" inputmode="numeric"
+            autocomplete="cc-csc" maxlength="4" placeholder="CVC" />
+        </div>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <p class="note">No data is stored or transmitted. Submit returns a fake code only.</p>
+
+    <script>
+      // Callback to return to. Supply ?redirect=<url-encoded-callback>; defaults to a
+      // neutral custom scheme. The app registers whatever scheme it passes here.
+      var params = new URLSearchParams(location.search);
+      var redirect = params.get('redirect') || 'app://callback';
+
+      document.getElementById('form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        // No card data leaves this page. Return only a fake one-time code, mirroring
+        // how a real flow would return a short-lived code to exchange server-side.
+        var code = 'test-' + Math.floor(Date.now() / 1000) + '-ok';
+        var sep = redirect.indexOf('?') === -1 ? '?' : '&';
+        location.href = redirect + sep + 'code=' + encodeURIComponent(code);
+      });
+    </script>
+  </body>
+</html>
