@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <title>Card information</title>
@@ -27,14 +27,18 @@
         --radius: 12px;
         --field-radius: 8px;
       }
-      html[data-theme='dark'] {
-        --accent: #7767e4;
-        --text: #f7f7fa;
-        --text-muted: #9497a9;
-        --negative: #ff6b73;
-        --negative-surface: rgba(255, 107, 115, 0.12);
-        --surface: #22232d;
-        --bg: #1a1b22;
+      /* Follow the device appearance (the in-app browser sheet inherits it), matching the
+         real flow where the app passes the resolved theme to the page. */
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --accent: #7767e4;
+          --text: #f7f7fa;
+          --text-muted: #9497a9;
+          --negative: #ff6b73;
+          --negative-surface: rgba(255, 107, 115, 0.12);
+          --surface: #22232d;
+          --bg: #1a1b22;
+        }
       }
       html { height: 100%; overflow: hidden; }
       body {
