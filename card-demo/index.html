@@ -167,10 +167,10 @@
     </div>
 
     <script>
-      // Standalone demo: validates, then redirects to a generic demo:// callback with a
+      // Standalone demo: validates, then redirects to the cardftdemo:// callback with a
       // dummy token. No backend. The point of the demo is that the native card autofill
       // (Keychain / password managers) fires on the cc-* fields inside the in-app browser sheet.
-      var REDIRECT_URI = 'demo://card/callback';
+      var REDIRECT_URI = 'cardftdemo://card/callback';
       var numberEl = document.getElementById('card-number');
       var expEl = document.getElementById('exp');
       var cvvEl = document.getElementById('cvv');
