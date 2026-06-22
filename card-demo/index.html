@@ -1,36 +1,236 @@
-<!doctype html><html lang="en" data-theme="light"><head><meta charset="utf-8"><title>Card information</title><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400;1,500&display=swap"><link id="ibm-plex-font" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet" media="print"><style>*,:before,:after{box-sizing:border-box}html{-webkit-text-size-adjust:none;-moz-text-size-adjust:none;text-size-adjust:none}body,h1,h2,h3,h4,p,figure,blockquote,dl,dd{margin-block-end:0}ul[role=list],ol[role=list]{list-style:none}body{min-height:100vh;line-height:1.5}h1,h2,h3,h4,button,input,label{line-height:1.1}h1,h2,h3,h4{text-wrap:balance}a:not([class]){-webkit-text-decoration-skip-ink:auto;text-decoration-skip-ink:auto;color:currentColor}img,picture{max-width:100%;display:block}input,button,textarea,select{font:inherit}textarea:not([rows]){min-height:10em}:target{scroll-margin-block:5ex}html{--spacing-00-px:0px;--spacing-08-px:8px;--borders-neutral-emphasis-low:rgba(104,107,130,.32);--component-inputs-colour-surface-default:#fff;--borders-active-focus:#5841d8;--component-inputs-colour-surface-selected:rgba(119,103,228,.08);--component-inputs-colour-surface-hover:rgba(104,107,130,.04);--type-icons-primary:#101114;--type-icons-neutral:#686b82}html[data-theme=dark]{--borders-neutral-emphasis-low:rgba(104,107,130,.32);--component-inputs-colour-surface-default:#22232d;--borders-active-focus:#7767e4;--component-inputs-colour-surface-selected:rgba(119,103,228,.08);--component-inputs-colour-surface-hover:rgba(104,107,130,.04);--type-icons-primary:#f7f7fa;--type-icons-neutral:#9497a9}.mainContainer{flex-direction:column;gap:.5rem;display:flex}.secondRowContainer{grid-template-columns:minmax(0,1fr) minmax(0,1fr);display:grid}.credit-card-name-label{flex-direction:column;margin-bottom:16px;display:flex}.credit-card-name-label .label{align-items:center;gap:2px;display:flex}input{--border-radius:8px;color:var(--type-icons-primary);border-radius:var(--spacing-08-px);border:1px solid var(--borders-neutral-emphasis-low);background:var(--component-inputs-colour-surface-default);outline-offset:-2px;justify-content:center;align-self:stretch;align-items:flex-start;gap:105px;padding:13px 12px;display:flex}input:focus{outline:2px solid var(--borders-active-focus);background:var(--component-inputs-colour-surface-selected)}input::placeholder{color:var(--type-icons-neutral)}input.invalid{outline:2px solid var(--borders-error-emphasis-high,#d11d45)}input:disabled{background:var(--component-inputs-colour-surface-hover);border:none}.card-icon-container{grid-template-columns:1fr 1fr;gap:4px;line-height:0;display:grid;position:absolute;top:50%;right:12px;transform:translateY(-50%)}.credit-card-number-input{border-radius:var(--spacing-08-px)var(--spacing-08-px)var(--spacing-00-px)var(--spacing-00-px);width:100%}.expiration-date-input{border-radius:var(--spacing-00-px)var(--spacing-00-px)var(--spacing-00-px)var(--spacing-08-px);border-top:none;border-right:none}.cvv-input{border-radius:var(--spacing-00-px)var(--spacing-00-px)var(--spacing-08-px)var(--spacing-00-px);border-top:none}body{width:100%;height:100%;margin:0;font-family:IBM Plex Sans,Helvetica,Arial,sans-serif}@font-face{font-family:IBM Plex Sans;font-weight:400;font-display:swap;src:url(data:application/octet-stream;base64,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)}html{--cp-accent:#5841d8;--cp-accent-on:#fff;--cp-text:#101114;--cp-text-muted:#686b82;--cp-negative:#d12d36;--cp-negative-surface:rgba(209,45,54,.08);--cp-page-bg:#fff;--cp-page-padding-x:16px;--cp-page-padding-y:20px;--cp-field-gap:16px;--cp-address-gap:8px;--cp-radius:12px;--cp-available-height:100dvh}html[data-theme=dark]{--cp-accent:#7767e4;--cp-text:#f7f7fa;--cp-text-muted:#9497a9;--cp-negative:#ff6b73;--cp-negative-surface:rgba(255,107,115,.12);--cp-page-bg:#1a1b22}html{height:100%;overflow:hidden}body{background:var(--cp-page-bg);color:var(--cp-text);margin:0}.mainContainer{box-sizing:border-box;height:min(100dvh,var(--cp-available-height));padding:var(--cp-page-padding-y)var(--cp-page-padding-x)calc(var(--cp-page-padding-y) + env(safe-area-inset-bottom));gap:var(--cp-field-gap);flex-direction:column;display:flex}.mainContainer #credit-card-form{gap:var(--cp-field-gap);flex-direction:column;flex:1;min-height:0;display:flex}.error-banner{border-radius:var(--cp-radius);background:var(--cp-negative-surface);color:var(--cp-negative);padding:12px 16px;font-size:14px;display:none}.error-banner.visible{display:block}.credit-card-name-label{margin-bottom:0}.card-fields-group{flex-direction:column;display:flex}.field-error{color:var(--cp-negative);margin-top:-8px;font-size:12px;display:none}.field-error.visible{display:block}.credit-card-number-container{position:relative}.card-brand-icon{pointer-events:none;width:54px;height:20px;position:absolute;top:50%;right:12px;transform:translateY(-50%)}.card-brand-icon .brand-icon{box-shadow:0 0 0 1.5px var(--cp-page-bg);opacity:0;border-radius:4px;transition:opacity .2s,transform .2s;display:flex;position:absolute;top:0;right:0}.card-brand-icon[data-brand=empty] .brand-icon[data-brand-icon=visa]{opacity:1;transform:translate(-22px)}.card-brand-icon[data-brand=empty] .brand-icon[data-brand-icon=mastercard],.card-brand-icon[data-brand=visa] .brand-icon[data-brand-icon=visa]{opacity:1;transform:translate(0)}.card-brand-icon[data-brand=visa] .brand-icon[data-brand-icon=mastercard]{opacity:0;transform:translate(10px)}.card-brand-icon[data-brand=mastercard] .brand-icon[data-brand-icon=mastercard]{opacity:1;transform:translate(0)}.card-brand-icon[data-brand=mastercard] .brand-icon[data-brand-icon=visa]{opacity:0;transform:translate(-10px)}.billing-address-summary{margin:var(--cp-address-gap)0;flex-direction:row;justify-content:space-between;align-items:center;gap:12px;display:flex}.billing-address-summary[data-has-address=false]{display:none}.billing-address-summary .billing-address-text{flex-direction:column;gap:2px;min-width:0;display:flex}.billing-address-summary .billing-address-label{color:var(--cp-text-muted);font-size:12px}.billing-address-summary .billing-address-value{color:var(--cp-text);font-size:14px}.edit-address-button{color:var(--cp-text-muted);cursor:pointer;background:0 0;border:none;border-radius:10px;flex-shrink:0;justify-content:center;align-items:center;width:40px;height:40px;padding:0;transition:background .15s;display:flex}.edit-address-button:active{background:var(--cp-negative-surface);background:rgba(104,107,130,.08)}.edit-address-button svg{display:block}.submit-button{border-radius:var(--cp-radius);background:var(--cp-accent);color:var(--cp-accent-on);cursor:pointer;border:none;width:100%;margin-top:auto;padding:16px;font-family:inherit;font-size:16px;font-weight:600;transition:opacity .15s}.submit-button:disabled{opacity:.4;cursor:default}.submit-button.loading{color:transparent;position:relative}.submit-button.loading:after{content:"";border:2px solid rgba(255,255,255,.5);border-top-color:#fff;border-radius:50%;width:18px;height:18px;margin:-9px 0 0 -9px;animation:.7s linear infinite spin;position:absolute;top:50%;left:50%}@keyframes spin{to{transform:rotate(360deg)}}</style><script>
-(function () {
-  var realFetch = window.fetch ? window.fetch.bind(window) : null;
-  window.fetch = function (input, init) {
-    var url = typeof input === 'string' ? input : (input && input.url) || '';
-    if (/\/vault\/v1\/tokens/.test(url) && init && (init.method || '').toUpperCase() === 'POST') {
-      var vt = 'tok_demo-' + (crypto.randomUUID ? crypto.randomUUID() : Date.now());
-      return Promise.resolve(new Response(JSON.stringify({ vaultTokenId: vt }), {
-        status: 200, headers: { 'Content-Type': 'application/json' },
-      }));
-    }
-    return realFetch ? realFetch(input, init) : Promise.reject(new Error('demo: blocked ' + url));
-  };
-})();
-</script><script>!function(){let e,t,r,n,a,l,i,d,s,o;let c=e=>{let t=e.replace(/\s/g,"").trim();return/^\d{13,19}$/.test(t)},u=e=>{let t=e.replace(/\s/g,"").trim();if(!t)return!1;let r=0,n=!1;for(let e=t.length-1;e>=0;e--){let a=parseInt(t.charAt(e),10);n&&(a*=2)>9&&(a-=9),r+=a,n=!n}return r%10==0},h=e=>"4"===e.charAt(0)?"Visa":e.match(/^(3(6|8|9|0([0-5]|95)))/gi)?"Diners":e.match(/^(3(4|7))/gi)?"Amex":e.match(/^(67(59|677(0|4))|50|5[6-9])/gi)?"Maestro":e.match(/^(2(22[1-9]|2[3-9][0-9]|[3-6][0-9][0-9]|7[0-1][0-9]|720)|5[1-5])/gi)?"Mastercard":"Unknown",v=e=>["Visa","Mastercard"].includes(h(e.replace(/\s/g,"").trim())),g=({expirationMonth:e,expirationYear:t})=>{let r=e.replace(/\s/g,"").trim(),n=t.replace(/\s/g,"").trim();if(!/^(0[1-9]|1[0-2])$/.test(r)||!/^\d{2}$/.test(n))return!1;let a=parseInt(e,10),l=parseInt(`20${parseInt(t,10)}`,10),i=new Date,d=i.getFullYear(),s=i.getMonth()+1;return l>d||l===d&&a>=s},m=e=>/^\d{3}$/.test(e),p=(e,t)=>t.reduce((e,t)=>t(e),e),f=e=>e.replace(/\D/g,""),w=e=>e.replace(/\s/g,""),y=(e,t)=>{let r=e;return t||(r=r.replace(/^([1-9]\/|[2-9])$/g,"0$1 / ").replace(/^(0[1-9]|1[0-2])$/g,"$1 / ").replace(/^([0-1])([3-9])$/g,"0$1 / $2").replace(/^(0?[1-9]|1[0-2])([0-9]{2})$/g,"$1 / $2")),r=r.replace(/^([0]+)\/|[0]+$/g,"0").replace(/[^\d/\s]|^\/*$/g,"").replace(/\/\//g,"/")};class E extends Error{constructor({message:e,status:t,predefined:r}){super(e),this.name="CreateVaultTokenError",this.status=t,this.predefined=r}}let b=["unsupported bin","unsupported card brand"],L=e=>b.find(t=>e.includes(t)),M=async({card:e,auth:t})=>{try{let r=await fetch("/default/vault/v1/tokens",{method:"POST",headers:{"Content-Type":"application/json",auth:t},body:JSON.stringify({card:e})});if(r.ok)return await r.json();let n=(await r.json()).error||"Something went wrong";throw new E({message:n,status:r.status,predefined:L(n)})}catch(e){if(e instanceof E)throw e;throw new E({message:e instanceof Error?e.message:"Unknown error",status:500})}},x=`
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="20" fill="none">
-    <rect width="32" height="20" fill="#fff" rx="4" />
-    <rect width="31" height="19" x=".5" y=".5" stroke="#686B82" stroke-opacity=".32" rx="3.5" />
-    <g clip-path="url(#visa-a)">
-        <path fill="#00579F" d="M14.659 13.563h-1.62l1.013-6.446h1.619l-1.012 6.446ZM20.526 7.274A3.887 3.887 0 0 0 19.074 7c-1.598 0-2.724.878-2.73 2.133-.014.926.805 1.44 1.418 1.749.626.315.839.521.839.802-.006.432-.506.631-.972.631-.646 0-.992-.102-1.519-.343l-.213-.103-.226 1.447c.38.178 1.079.337 1.805.343 1.698 0 2.804-.864 2.817-2.201.006-.734-.426-1.296-1.359-1.756-.566-.295-.913-.494-.913-.795.007-.275.294-.556.933-.556.526-.014.913.117 1.206.247l.146.069.22-1.393ZM22.677 11.28c.134-.37.646-1.804.646-1.804-.006.014.133-.377.213-.617l.113.555s.307 1.543.374 1.866h-1.346Zm1.998-4.163h-1.252c-.386 0-.68.116-.846.535l-2.404 5.911h1.698l.34-.967h2.078c.047.226.193.967.193.967h1.499l-1.306-6.446ZM11.688 7.117l-1.585 4.396-.173-.892C9.637 9.592 8.717 8.475 7.692 7.92l1.452 5.638h1.711l2.544-6.44h-1.711Z" />
-        <path fill="#F90" d="M8.63 7.117H6.028L6 7.247c2.031.535 3.377 1.824 3.93 3.374L9.363 7.66c-.093-.412-.38-.529-.732-.542Z" />
-    </g>
-    <defs>
-        <clipPath id="visa-a"><path fill="#fff" d="M6 7h20v6.667H6z" /></clipPath>
-    </defs>
-</svg>`,B=`
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="20" fill="none">
-    <rect width="32" height="20" fill="#fff" rx="4" />
-    <rect width="31" height="19" x=".5" y=".5" stroke="#686B82" stroke-opacity=".32" rx="3.5" />
-    <path fill="#FF5F00" d="M17.672 7.239H14.32v6.025h3.353V7.24Z" />
-    <path fill="#EB001B" d="M14.532 10.252a3.826 3.826 0 0 1 1.464-3.013 3.832 3.832 0 1 0 0 6.025 3.826 3.826 0 0 1-1.464-3.012Z" />
-    <path fill="#F90" d="M22.196 10.252a3.832 3.832 0 0 1-6.2 3.012 3.833 3.833 0 0 0 0-6.025 3.832 3.832 0 0 1 6.2 3.013ZM21.83 12.626v-.123h.05v-.025h-.127v.025h.05v.123h.027Zm.246 0v-.149h-.039l-.045.103-.044-.103h-.04v.15h.028v-.113l.042.097h.029l.041-.097v.112h.028Z" />
-</svg>`,I=`
-<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none">
-    <path d="M18 10.5002L7.79289 20.7073C7.60536 20.8948 7.351 21.0002 7.08579 21.0002H3V16.9144C3 16.6492 3.10536 16.3948 3.29289 16.2073L13.5 6.00019L15.5858 3.9144C16.3668 3.13335 17.6332 3.13335 18.4142 3.9144L20.0858 5.58597C20.8668 6.36702 20.8668 7.63335 20.0858 8.4144L18 10.5002ZM13.5 6.00019L18 10.5002" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>`,$="credit-card-number",k="expiration-date",Z=({auth:c,redirectUri:u})=>{s=c,o=u,e=document.getElementById("credit-card-form"),t=document.getElementById("submit-button"),r=document.getElementById("error-banner"),n=document.getElementById("card-brand-icon"),a=document.getElementById("credit-card-name"),l=document.getElementById($),i=document.getElementById(k),d=document.getElementById("cvv"),J(),N(),W(),q(),G(),K(),C(),P(),Y(),l.focus()},C=()=>{let e=window.visualViewport,t=()=>{var t;let r=null!==(t=null==e?void 0:e.height)&&void 0!==t?t:window.innerHeight;document.documentElement.style.setProperty("--cp-available-height",`${r}px`)};t(),null==e||e.addEventListener("resize",t),window.addEventListener("orientationchange",t)},j=e=>{let t=new URL(o);Object.entries(e).forEach(([e,r])=>t.searchParams.set(e,r)),window.location.assign(t.toString())},V=e=>{t.classList.toggle("loading",e),P(e)},F=e=>{r.textContent=e,r.classList.add("visible")},H={[$]:e=>c(e.value)&&u(e.value)?v(e.value)?null:"Only Visa and Mastercard are supported":"Enter a valid card number",[k]:e=>{var t,r;let[n,a]=e.value.split("/");return g({expirationMonth:null!==(t=null==n?void 0:n.trim())&&void 0!==t?t:"",expirationYear:null!==(r=null==a?void 0:a.trim())&&void 0!==r?r:""})?null:"Enter a valid expiry date"},cvv:e=>m(e.value)?null:"Enter a valid security code"},O=[$,k,"cvv"],T=()=>{let e=document.getElementById("card-fields-error");if(!e)return;let t=O.map(e=>{var t;return null===(t=document.getElementById(e))||void 0===t?void 0:t.dataset.errorMessage}).find(Boolean);e.textContent=null!=t?t:"",e.classList.toggle("visible",!!t)},U=(e,t)=>{e.classList.toggle("invalid",!!t),t?e.dataset.errorMessage=t:delete e.dataset.errorMessage,T()},A=()=>Object.entries(H).every(([e,t])=>null===t(document.getElementById(e))),P=(e=!1)=>{t.disabled=e||!A()},S=()=>{n.childElementCount>0||(n.innerHTML=`<span class="brand-icon" data-brand-icon="visa">${x}</span><span class="brand-icon" data-brand-icon="mastercard">${B}</span>`)},D=()=>{let e=l.value.replace(/\s/g,"");if(!e)return"empty";let t=h(e);return"Visa"===t?"visa":"Mastercard"===t?"mastercard":"none"},Y=()=>{S(),n.setAttribute("data-brand",D())},z=async()=>{let e=null;if(Object.entries(H).forEach(([t,r])=>{let n=document.getElementById(t),a=r(n);U(n,a),a&&!e&&(e=n)}),e){e.focus();return}r.classList.remove("visible"),V(!0);try{let{vaultTokenId:e}=await M({card:{name:a.value.trim(),number:l.value.replace(/\s/g,"").trim(),expiration:{month:i.value.split("/")[0].trim(),year:i.value.split("/")[1].trim()},cvc:d.value},auth:s});j({t:e})}catch(e){if(V(!1),e instanceof E&&e.predefined){j({error:e.predefined});return}F(e instanceof E?e.message:"Something went wrong")}},J=()=>{l.addEventListener("input",()=>{U(l,null);let e=p(l.value,[f,w]),t="";for(let r=0;r<e.length;r++)r%4==0&&r>0&&(t+=" "),t+=e[r];l.value=t,Y(),P(),c(e)&&u(e)&&R(l,i)})},N=()=>{i.addEventListener("input",e=>{var t,r;U(i,null);let n=null!==(r=null===(t=e.inputType)||void 0===t?void 0:t.startsWith("delete"))&&void 0!==r&&r;i.value=y(i.value,n),P(),!n&&i.value.length>=7&&R(i,d)})},R=(e,t)=>{U(e,H[e.id](e)),t.focus()},W=()=>{d.addEventListener("input",()=>{U(d,null);let e=p(d.value,[f,w]);e!==d.value&&(d.value=e),P(),d.value.length>=3&&(U(d,H[d.id](d)),d.blur())})},q=()=>{Object.entries(H).forEach(([e,t])=>{let r=document.getElementById(e);r.addEventListener("blur",()=>{""!==r.value.trim()&&U(r,t(r))})})},G=()=>{e.addEventListener("submit",e=>{e.preventDefault(),z()})},K=()=>{let e=document.getElementById("edit-address-button");e&&(e.innerHTML=I,e.addEventListener("click",()=>{j({action:"edit-address"})}))};window.onload=()=>{let{auth:e,redirectUri:t}=document.body.dataset;Z({auth:e,redirectUri:t})};let Q=document.getElementById("ibm-plex-font");Q.addEventListener("load",()=>{Q.media="all"})}();</script></head><body data-auth="demo-jwt" data-redirect-uri="demo://card/callback"> <div class="mainContainer"> <div id="error-banner" class="error-banner" role="alert"></div> <form id="credit-card-form" novalidate> <label for="credit-card-name" class="credit-card-name-label"> <input type="text" id="credit-card-name" name="credit-card-name" value="Test Cardholder" disabled> </label>  <div class="card-fields-group"> <div class="credit-card-number-container"> <input type="text" id="credit-card-number" name="credit-card-number" aria-label="Card number" class="credit-card-number-input" placeholder="1234 5678 9012 3456" maxlength="19" autocomplete="cc-number" inputmode="numeric" autofocus> <div id="card-brand-icon" class="card-brand-icon"></div> </div> <div class="secondRowContainer"> <input type="text" id="expiration-date" name="expiration-date" aria-label="Expiry date" class="expiration-date-input" placeholder="MM / YY" maxlength="7" autocomplete="cc-exp" inputmode="numeric"> <input type="text" id="cvv" name="cvv" aria-label="Security code" class="cvv-input" placeholder="CVC" maxlength="3" autocomplete="cc-csc" inputmode="numeric"> </div> </div> <span id="card-fields-error" class="field-error"></span>  <div class="billing-address-summary" data-has-address="true"> <div class="billing-address-text"> <span class="billing-address-label">Billing address</span> <span class="billing-address-value">•••• London, EC1A 1BB</span> </div> <button type="button" id="edit-address-button" class="edit-address-button" aria-label="Edit billing address"></button> </div> <button type="submit" id="submit-button" class="submit-button"> Add card </button> </form> </div> </body></html>
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <title>Card information</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after { box-sizing: border-box; }
+      :root {
+        --accent: #5841d8;
+        --accent-on: #fff;
+        --text: #101114;
+        --text-muted: #686b82;
+        --negative: #d12d36;
+        --negative-surface: rgba(209, 45, 54, 0.08);
+        --surface: #fff;
+        --border: rgba(104, 107, 130, 0.32);
+        --bg: #fff;
+        --radius: 12px;
+        --field-radius: 8px;
+      }
+      html[data-theme='dark'] {
+        --accent: #7767e4;
+        --text: #f7f7fa;
+        --text-muted: #9497a9;
+        --negative: #ff6b73;
+        --negative-surface: rgba(255, 107, 115, 0.12);
+        --surface: #22232d;
+        --bg: #1a1b22;
+      }
+      html { height: 100%; overflow: hidden; }
+      body {
+        margin: 0;
+        height: 100%;
+        background: var(--bg);
+        color: var(--text);
+        font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;
+        line-height: 1.5;
+      }
+      .container {
+        box-sizing: border-box;
+        height: 100dvh;
+        padding: 20px 16px calc(20px + env(safe-area-inset-bottom));
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      form { display: flex; flex-direction: column; gap: 16px; flex: 1; min-height: 0; }
+      .name-field { margin-bottom: 0; }
+      input {
+        width: 100%;
+        padding: 13px 12px;
+        color: var(--text);
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--field-radius);
+        outline-offset: -2px;
+        font: inherit;
+      }
+      input:focus { outline: 2px solid var(--accent); }
+      input::placeholder { color: var(--text-muted); }
+      input.invalid { outline: 2px solid var(--negative); }
+      input:disabled { background: rgba(104, 107, 130, 0.06); border: none; }
+      .card-fields { display: flex; flex-direction: column; }
+      .card-number { border-radius: var(--field-radius) var(--field-radius) 0 0; }
+      .second-row { display: grid; grid-template-columns: 1fr 1fr; }
+      .exp { border-radius: 0 0 0 var(--field-radius); border-top: none; border-right: none; }
+      .cvv { border-radius: 0 0 var(--field-radius) 0; border-top: none; }
+      .error-banner {
+        display: none;
+        padding: 12px 16px;
+        border-radius: var(--radius);
+        background: var(--negative-surface);
+        color: var(--negative);
+        font-size: 14px;
+      }
+      .error-banner.visible { display: block; }
+      .field-error { display: none; margin-top: -8px; color: var(--negative); font-size: 12px; }
+      .field-error.visible { display: block; }
+      .address {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        margin: 8px 0;
+      }
+      .address-label { color: var(--text-muted); font-size: 12px; }
+      .address-value { color: var(--text); font-size: 14px; }
+      .submit {
+        margin-top: auto;
+        width: 100%;
+        padding: 16px;
+        border: none;
+        border-radius: var(--radius);
+        background: var(--accent);
+        color: var(--accent-on);
+        font: inherit;
+        font-weight: 600;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .submit:disabled { opacity: 0.4; cursor: default; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="error-banner" class="error-banner" role="alert"></div>
+      <form id="card-form" novalidate>
+        <label class="name-field">
+          <input type="text" id="card-name" value="Test Cardholder" disabled />
+        </label>
+
+        <div class="card-fields">
+          <input
+            type="text"
+            id="card-number"
+            class="card-number"
+            aria-label="Card number"
+            placeholder="1234 5678 9012 3456"
+            maxlength="19"
+            autocomplete="cc-number"
+            inputmode="numeric"
+            autofocus
+          />
+          <div class="second-row">
+            <input
+              type="text"
+              id="exp"
+              class="exp"
+              aria-label="Expiry date"
+              placeholder="MM / YY"
+              maxlength="7"
+              autocomplete="cc-exp"
+              inputmode="numeric"
+            />
+            <input
+              type="text"
+              id="cvv"
+              class="cvv"
+              aria-label="Security code"
+              placeholder="CVC"
+              maxlength="3"
+              autocomplete="cc-csc"
+              inputmode="numeric"
+            />
+          </div>
+        </div>
+        <span id="field-error" class="field-error"></span>
+
+        <div class="address">
+          <div>
+            <div class="address-label">Billing address</div>
+            <div class="address-value">•••• London, EC1A 1BB</div>
+          </div>
+        </div>
+
+        <button type="submit" id="submit" class="submit">Add card</button>
+      </form>
+    </div>
+
+    <script>
+      // Standalone demo: validates, then redirects to a generic demo:// callback with a
+      // dummy token. No backend. The point of the demo is that the native card autofill
+      // (Keychain / password managers) fires on the cc-* fields inside the in-app browser sheet.
+      var REDIRECT_URI = 'demo://card/callback';
+      var numberEl = document.getElementById('card-number');
+      var expEl = document.getElementById('exp');
+      var cvvEl = document.getElementById('cvv');
+      var submitEl = document.getElementById('submit');
+      var errorEl = document.getElementById('field-error');
+
+      var luhn = function (s) {
+        var d = s.replace(/\s/g, '');
+        if (!/^\d{13,19}$/.test(d)) return false;
+        var sum = 0, alt = false;
+        for (var i = d.length - 1; i >= 0; i--) {
+          var n = parseInt(d.charAt(i), 10);
+          if (alt) { n *= 2; if (n > 9) n -= 9; }
+          sum += n; alt = !alt;
+        }
+        return sum % 10 === 0;
+      };
+      var validExp = function (v) {
+        var p = v.split('/');
+        var m = (p[0] || '').trim(), y = (p[1] || '').trim();
+        return /^(0[1-9]|1[0-2])$/.test(m) && /^\d{2}$/.test(y);
+      };
+      var valid = function () {
+        return luhn(numberEl.value) && validExp(expEl.value) && /^\d{3}$/.test(cvvEl.value);
+      };
+      var refresh = function () { submitEl.disabled = !valid(); };
+
+      numberEl.addEventListener('input', function () {
+        var d = numberEl.value.replace(/\D/g, '');
+        var out = '';
+        for (var i = 0; i < d.length; i++) { if (i % 4 === 0 && i > 0) out += ' '; out += d[i]; }
+        numberEl.value = out;
+        refresh();
+      });
+      expEl.addEventListener('input', function () {
+        var d = expEl.value.replace(/[^\d]/g, '').slice(0, 4);
+        expEl.value = d.length > 2 ? d.slice(0, 2) + ' / ' + d.slice(2) : d;
+        refresh();
+      });
+      cvvEl.addEventListener('input', function () {
+        cvvEl.value = cvvEl.value.replace(/\D/g, '').slice(0, 3);
+        refresh();
+      });
+
+      document.getElementById('card-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!valid()) {
+          errorEl.textContent = 'Enter valid card details';
+          errorEl.classList.add('visible');
+          return;
+        }
+        submitEl.textContent = 'Adding…';
+        submitEl.disabled = true;
+        var token = 'tok_demo-' + (crypto.randomUUID ? crypto.randomUUID() : Date.now());
+        var url = new URL(REDIRECT_URI);
+        url.searchParams.set('t', token);
+        window.location.assign(url.toString());
+      });
+
+      refresh();
+    </script>
+  </body>
+</html>
